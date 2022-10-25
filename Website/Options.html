@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Options</title>
+    <link rel = "stylesheet" href = "All_CSS.css">
+    <script src="All_Java.js"></script>
+</head>
+<body onload="getCheckedRad(); getSliderVal()" onunload="saveCheckedRad(); saveSliderVal()">
+
+<h1 style="top: 0; bottom:400px;">Options</h1>
+
+<button class="back-button" onclick="history.back()" style="bottom: 100px;">Back To Home</button>
+
+<form>
+    <div class="options">Output Type -</div>
+    <div class="checkbox_box" id="set0">
+        <input class="checkbox" type="radio" name="radio1" checked>Traffic Lights<span style="color: white">............</span>
+        <input class="checkbox" type="radio" name="radio1">Percentage
+    </div>
+</form>
+
+<br>
+
+<div class="slide_container" id="slider_box">
+    <a class="options"> Activation Limit</a>
+    <input class="slider" id="Percentage" type="range" max="100" oninput="rangeValue.innerText = this.value" value="10" onload="rangeValue.innerText = this.value">
+    <a class="options" id="rangeValue" style="padding-left: 400px;">10</a><a class="options" style="padding-left: 0">%</a>
+</div>
+
+<br>
+
+<form>
+    <div class="options">Output Log</div>
+    <div class="checkbox_box" id="set1">
+        <input class="checkbox" type="radio" id="radio21" name="radio2" checked> Only Most Probable
+        <input class="checkbox" type="radio" id="radio22" name="radio2"> All Possibilities
+    </div>
+</form>
+
+<br>
+
+<div class="help" onclick="HelpFunc()"> Help Here!
+    <span class="help_text" id="HPop">
+        <ul>
+            <li><b>Before Changing Settings Please be sure that you know what you are doing as it can drastically
+                change the functionality of the app</b>
+            </li>
+            <li>
+                The <b>Output Type</b> option changes how you will see the results from the app: <i>Traffic Lights</i>
+                will show you a different colour depending on the certainty of the program while <i>Percentage</i> will
+                show a more accurate percentage of how certain the program is of its choices.
+            </li>
+            <li>
+                The <b>Activation Limit</b> option will change how certain the program needs to be before it returns a result.
+            </li>
+            <li>
+                The <b>Output Log</b> option will decode if you want to see the full out put of the program as it
+                produces guesses for each class, essentially if <i>Show All Outputs</i> is selected the program will
+                show how certain it is of each class rather than the ones it is most certain of, if this option is not
+                 selected only the most probable classes will be displayed
+            </li>
+        </ul>
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.14.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script>
+</head>
+<body>
+<script type="module">
+
+ async function loadModel(){
+    const model = await tf.loadLayersModel('JS_good/model.json')
+
+     model.predict(tf.zeros([1, 28, 28, 1]))
+
+     return model
+ }
+
+async function predicter(){
+    let model = loadModel()
+    let img = document.getElementById('newimg')
+    let image = tf.browser.toPixels(img)
+    document.getElementById('output').innerHTML = model.predict(image)
+}
+
+ async function linearLearn() {
+     const model = tf.sequential();
+     model.add(tf.layers.dense({units: 1, inputShape: [1]}));
+
+     model.compile({
+         loss: 'meanSquaredError',
+         optimizer: 'sgd'
+     })
+     const xs = tf.tensor2d([-1, 0, 1, 2, 3, 4], [6, 1]);
+     const ys = tf.tensor2d([-3, -1, 1, 3, 5, 7], [6, 1]);
+     await model.fit(xs, ys, {epochs: 500});
+     document.getElementById('output').innerText =
+         model.predict(tf.tensor2d([20], [1, 1]));
+ }
+linearLearn()
+</script>
+
+<img id="newimg" src="newcat.jpg">
+<div id="output"></div>
+
+</body>
+</html>

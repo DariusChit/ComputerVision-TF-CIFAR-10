@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Identification</title>
+    <link rel = "stylesheet" href = All_CSS.css>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.14.0"></script>
+</head>
+<body>
+
+<script src="All_Java.js"></script>
+
+<h1>Object Identification</h1>
+
+<div class="midnav">
+    <a class="active" href="Options.html" style="border-left: 4px solid; padding-left: 55px; padding-right: 55px">Options</a>
+    <a class="active" href="Tutorial.html" style="padding-right: 60px; padding-left: 50px">Tutorial</a>
+    <a class="active" href="HowItWorks.html">How It Works</a>
+</div>
+
+<div class="openBtn">
+    <button class="popup" onclick="openForm()">Click Here To Start</button>
+</div>
+
+<div class="loginPopup">
+    <div class="formPopup" id="popupForm">
+        <form class="form-container">
+            <label class="form-text" for="img">
+                <strong>Choose Image</strong>
+            </label>
+            <input class="img-input" type="file" accept="image/jpeg" id="img" placeholder="Image" name="img" oninput="imgBox()" required>
+            <button type="button" class="btn" id="submit" onclick="openPop(); canvas()" >Predict</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            <br>
+            <img id="blah" src="#" alt="your image" onload="fixImg()">
+        </form>
+    </div>
+</div>
+
+<div id="screen-pop" class="overlay">
+    <h1 style="top: 0; bottom: 400px">Results</h1>
+    <button class="back-button" style="margin-bottom: 0; bottom: 80px; left: 10px" onclick="closePop(); clearList()">Back To Home</button>
+    <div class="pop-content">
+        <div class="rectangle">
+            <span class="red" id="red"></span>
+            <span class="orng" id="orng"></span>
+            <span class="green" id="green"></span>
+        </div>
+            <ol class="log">
+                <li id="0"></li>
+                <li id="1"></li>
+                <li id="2"></li>
+                <li id="3"></li>
+                <li id="4"></li>
+                <li id="5"></li>
+                <li id="6"></li>
+                <li id="7"></li>
+                <li id="8"></li>
+                <li id="9"></li>
+            </ol>
+        <div id="ans" class="img-used">Answer = </div>
+        <span class="img-used">Image Used:</span>
+        <canvas id="canvas" height="32" width="32">Unable to display image on this browser</canvas>
+        <img id="newimg" src="">
+        <span class="text" id="final">The Image must be converted to 32x32 to be usable by the program</span>
+    </div>
+</div>
+</body>
+</html>

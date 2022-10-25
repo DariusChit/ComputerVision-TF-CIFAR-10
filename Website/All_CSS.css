@@ -1,0 +1,402 @@
+h1 {
+    font-family: "Calibri Light", serif;
+    font-size: 600%;
+    background-size: 150% 150%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+h2{
+    font-family: "Calibri Light", serif;
+    font-size: 250%;
+    background-color: #9B9EFF;
+    background-size: 500% 500%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 100px
+}
+
+h3{
+    font-family: "Calibri Light", serif;
+    font-size: 400%;
+    background-color: #92DFEB;
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 150px;
+    text-align: center;
+}
+
+.popup {
+    font-family: "Calibri Light", serif;
+    font-size: 650%;
+    background-color: #92DFEB;
+    position: relative;
+    top: 150px;
+    text-align: center;
+    line-height: 200px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.popup:hover {
+    background-color: #FF6666;
+    transition-duration: 500ms;
+}
+
+.midnav {
+    font-family: "Calibri Light", serif;
+    font-size: 400%;
+    background-color: #9B9EFF;
+    overflow: hidden;
+    color: black;
+    text-decoration: none;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+
+.midnav a {
+    float: none;
+    text-align: center;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 125px;
+    border-right: 4px solid;
+    border-left: 4px solid;
+    width: 33.33%;
+}
+
+.midnav a:hover {
+    background-color: #FF6666;
+    transition-duration: 500ms;
+}
+
+.active {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    padding: 60px 50px;
+    line-height: 200px;
+}
+
+.back-button {
+    color: black;
+    font-family: "Calibri Light", serif;
+    font-size: 200%;
+    font-weight: bold;
+    background-size: 75px 40px;
+    background-color: #9B9EFF;
+    position: relative;
+    text-align: left;
+}
+
+.back-button:hover {
+    background-color: #FF6666;
+    transition-duration: 500ms;
+    cursor: pointer;
+}
+
+/* OPTIONS PAGE STYLES */
+
+.slide_container {
+    width: 75%;
+}
+
+.slider{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 75%;
+    height: 50px;
+    background-color: #92DFE8;
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: 200ms;
+    transition: opacity 200ms;
+    position: relative;
+    horiz-align: center;
+    left: 10%;
+}
+
+.slider:hover {
+    opacity: 1;
+    background: #92DFC8;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: black;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+}
+
+.options {
+    font-family: "Calibri Light", serif;
+    font-size: 300%;
+    padding-left: 30px;
+}
+
+.checkbox {
+    left: 120px;
+    width: 50px;
+    height: 50px;
+}
+
+.checkbox_box {
+    left: 462px;
+    font-family: "Calibri Light", serif;
+    font-size: 400%;
+    position: relative;
+    text-align: left;
+}
+
+.help {
+    font-family: "Calibri Light", serif;
+    font-size: 300%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    left: 100px;
+    background-color: #FFB9A7;
+    padding-left: 7px;
+    padding-right: 7px;
+    border: black;
+}
+
+.help .help_text {
+    visibility: hidden;
+    width: 1500px;
+    background-color: #92DFC8;
+    color: black;
+    text-align: justify;
+    position: absolute;
+    z-index: 1;
+    bottom: 5%;
+    left: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.help .show {
+    visibility: visible;
+}
+
+.help:hover {
+    background-color: #FF6666;
+    transition-duration: 500ms;
+}
+
+input[type='radio'] {
+    box-sizing: border-box;
+    appearance: none;
+    background: white;
+    outline: 2px solid #333;
+    border: 3px solid white;
+    width: 40px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+input[type='radio']:checked {
+    background: #333;
+}
+
+.disclaimer {
+    font-family: "Calibri Light", serif;
+    font-size: 75px;
+    position: relative;
+    top: -10px;
+}
+
+/* Popup CSS*/
+
+.openBtn {
+    display: flex;
+    justify-content: left;
+}
+
+.loginPopup {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.formPopup {
+    display: none;
+    position: fixed;
+    left: 45%;
+    top: 10%;
+    transform: translate(-50%, 5%);
+    border: 3px solid #333333;
+    z-index: 9;
+    width: 75%;
+    height: 80%;
+}
+
+.form-container {
+    padding: 20px;
+    background-color: #fff;
+    height: 80%;
+}
+
+.form-container input[type=file] {
+    width: 75%;
+    padding: 15px;
+    margin: 10px 0 20px 0;
+    border: none;
+    background: #9B9EFF;
+    font-family: "Calibri Light", serif;
+    font-size: 300%;
+}
+
+.form-container input[type=file]:focus {
+    background-color: #92DFEB;
+    outline: none;
+}
+
+.form-container .btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #8ebf42;
+    color: #fff;
+    cursor: pointer;
+    width: 80%;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    font-size: 200%;
+    height: 10%;
+}
+
+.form-container .cancel {
+    background-color: #cc0000;
+}
+
+.form-container .btn:hover,
+.openButton:hover {
+    opacity: 1;
+}
+
+.form-text {
+    font-family: "Calibri Light", serif;
+    font-size: 600%;
+}
+
+/* all for big pop up */
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 100px}
+    .overlay .close {
+        font-size: 150px;
+        top: 15px;
+        left: 35px
+    }
+}
+
+/* ALL Traffic Light Shapes */
+.rectangle {
+    background-color: black;
+    height: 180px;
+    width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+
+}
+
+.rectangle span {
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    background-color: grey;
+    position: relative;
+    display: inline-block;
+}
+
+.log {
+    font-family: "Calibri Light", serif;
+    font-size: 190%;
+    background-color: #92DFEB;
+    display: inline-block;
+    padding-left: 3%;
+    position: relative;
+    margin: 2%;
+}
+
+canvas {
+    display: none;
+}
+
+#newimg {
+    left: 50%;
+    padding-left: 100px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.img-used {
+    font-family: "Calibri Light", serif;
+    font-size: 200%;
+    bottom: 5%;
+    left: 0;
+    padding-left: 100px;
+    display: inline-block;
+}
+
+.text {
+    font-size: 120%;
+    font-family: "Calibri Light", serif;
+    background-color: #9B9EFF;
+    font-weight: bold;
+}
